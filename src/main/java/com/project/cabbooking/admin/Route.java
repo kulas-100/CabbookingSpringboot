@@ -23,6 +23,7 @@ public class Route{
     Double fare;
 
     @Id
+    @GeneratedValue
     Integer locationId;
     String StartTime;
     String EndTime;

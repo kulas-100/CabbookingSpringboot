@@ -122,13 +122,14 @@ public class AdminServiceImpl implements AdminService{
     }
 
     @Override
-    public void deleteRoute(Integer routeId) throws RouteException {
+    public Route deleteRoute(Integer routeId) throws RouteException {
         if(routeRepository.findById(routeId).isEmpty()){
             throw  new RouteException("The location does not exist");
         }
         this.routeRepository.delete(routeRepository.findById(routeId).get());
 
 //        return Optional.empty();
+        return null;
     }
 
     @Override

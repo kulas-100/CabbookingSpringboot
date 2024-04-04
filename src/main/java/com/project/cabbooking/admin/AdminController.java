@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin("http://localhost:4200/")
+@CrossOrigin({"http://localhost:4200/","http://localhost:3000"})
 public class AdminController {
 
     private DriverRepository driverRepository;
@@ -125,6 +125,11 @@ public class AdminController {
     public List<Leave> getAllLeaves() throws AdminExceptions {
         return this.adminService.getAllLeaves();
     }
+    @DeleteMapping("deleteroute/{RouteId}")
+    public Route deleteRoute(@PathVariable Integer RouteId)throws RouteException{
+        return this.adminService.deleteRoute(RouteId);
+    }
+
 
 
 }

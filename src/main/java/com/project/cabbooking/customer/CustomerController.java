@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@CrossOrigin("http://localhost:4200/")
+@CrossOrigin({"http://localhost:4200/","http://localhost:3000"})
 public class CustomerController {
     @Autowired
     private CustomerService customerService;

@@ -26,7 +26,7 @@ public interface AdminService {
 
     List<DriverAccount> displayAllDrivers() throws RouteException;
     Route createRoute( Route route) throws RouteException;
-    void deleteRoute(Integer routeId) throws RouteException;
+    Route deleteRoute(Integer routeId) throws RouteException;
 
     List<Route> displayAllLocations() throws RouteException;
     Route updateFare(Integer routeId, Double fare) throws RouteException;
